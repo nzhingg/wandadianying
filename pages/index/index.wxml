@@ -1,0 +1,37 @@
+<!--小程序中的标签不是div,p,a等标签，而是采用了自定义的view等组件，view就相当于div标签-->
+<view class="container">
+  <!--WXML页面中的数据都来自对应Page的data,数据绑定使用{{}}将变量包起来-->
+  <!--navigator组件是用于页面跳转的，url就是对应点击之后的页面路径-->
+  <navigator class="page__hd" url="../cinemas/cinemas">
+    <!--这里的store就是动态数据，需要去Page中的data中设置-->
+      <view class="page__hd_store">当前影院:{{store}}></view>
+      <button class="btn">切换</button>
+  </navigator>
+  <!--在组件上使用wx:for控制属性绑定一个数组，使用数组中各项的数据重复渲染组件。主页的电影信息就是一个个列表
+  默认数组的当前项的下标变量名默认为index，数组当前项的变量名默认为item，所以在Page页面中只需要设置movies就可以，
+  for循环里的数据都可以用item. 来获取数据-->
+  <!--scroll-view是可滚动视图区域，scroll-y="true"表示垂直方向上可滚动，默认为false,如果要设置水平方向上滑动，即scroll-x="true"-->
+  <scroll-view class="page__bd" wx:for="{{movies}}" wx:key="{{index}}" scroll-y="true">
+    <view class="movies">
+      <navigator url="../detailedInfo/detailedInfo?id={{item.id}}">
+        <view class="item">
+          <view class="movie__hd">
+            <image class="movie" src="{{item.image}}" />
+          </view>
+          <view class="movie__bd">
+            <text class="movie__bd_name">{{item.movieName}}</text>
+            <text class="movie__bd_jd">{{item.edition}}</text>
+            <text class="movie__bd_introduction">{{item.introduction}}</text>
+            <text class="movie__bd_actor">{{item.actor}}</text>
+          </view>
+        </view>
+      </navigator>
+      <view class="movie__ft">
+        <text class="movie__ft_score">{{item.score}}</text>
+        <navigator url="../ticket/ticket">
+          <button class="btn big">购票</button>
+        </navigator>
+      </view>
+    </view>
+  </scroll-view>
+</view>

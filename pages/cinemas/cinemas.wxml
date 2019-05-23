@@ -1,0 +1,13 @@
+<view class="container">
+    <view class="page__hd">
+        <text class="hd_city">南昌</text>
+    </view>
+    <view class="page__bd" wx:for="{{cinemas}}" data-current="{{index}}" bindtap="chooseCinema">
+        <navigator url="../index/index">
+        <view class="bd_item" >
+            <text class="item__store">{{item.cinema}}</text>
+            <text class="item__position">{{item.position}}</text>
+        </view>
+        </navigator>
+    </view>
+</view>

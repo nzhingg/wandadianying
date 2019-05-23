@@ -1,0 +1,52 @@
+<!--pages/detailedInfo/detailedInfo.wxml-->
+<view class="container">
+    <view class="page__hd">
+        <image class="page__hd_movie" src="{{item.image}}" />
+        <image class="page__hd_movie-background" src="{{item.image}}" />
+        <view class="page__hd_info">
+            <text class="info__movieName">{{item.movieName}}</text>
+            <text class="info__EnglishName">{{item.EnglishName}}</text>
+            <text class="info__time">{{item.time}}</text>
+            <text class="info__type">{{item.type}}</text>
+            <text class="info__showTime">{{item.showTime}}</text>
+            <text class="info__introduction">{{item.introduction}}</text>
+        </view>
+        <view class="page__hd_score">
+            <text class="score">9.7</text>
+        </view>
+    </view>
+    <view class="page__bd">
+        <view class="bd__movieSynopsis">{{item.synopsis}}</view>
+        <view class="bd__movieParticipants">
+            <scroll-view class="scroll-view_participants" scroll-x="true">
+                <view class="content" style="display:inline-block">
+                    <text class="movieDirector font">导演</text>
+                    <view class="scroll-view__content">
+                        <image class="directorImag" src="{{item.directorImage}}" />
+                        <text class="director">{{item.director}}</text> 
+                    </view>
+                    <text class="movieActors font">演员</text>
+                    <view class="scroll-view__content-actors" wx:for="{{actors}}" wx:key="{{index}}">
+                        <image class="actorImage" src="{{item.image}}"/>
+                        <text class="actor">{{item.name}}</text>
+                        <!-- <text class="role">{{item.role}}</text> -->
+                    </view>
+                </view>
+            </scroll-view>
+        </view>
+        <view class="bd__movieStills">
+            <text class="image">图片</text>
+            <navigator class="numbers" url="../stills/stills?id={{item.id}}">
+                <text class="number">{{item.stillsNum}}></text>
+            </navigator>
+            <scroll-view scroll-x="true" style="white-space: nowrap;display:flex">
+                <view class="stills" style="display:inline-block" wx:for="{{stills}}" wx:key="{{index}}">
+                    <image class="still" src="{{item.image}}" />
+                </view>
+            </scroll-view>
+        </view>
+    </view>
+    <view class="page__ft" bindtap="toTicket">
+        <view class="ticket">立即购票</view>
+    </view>
+</view>

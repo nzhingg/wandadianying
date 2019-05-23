@@ -1,0 +1,232 @@
+/* pages/detailedInfo/detailedInfo.wxss */
+
+.pege__hd {
+    width: 750rpx;
+    height: 382rpx;
+    position: relative;
+    background-color: pink;
+    overflow: hidden;
+}
+.page__hd_movie-background {
+    width: 750rpx;
+    height: 150rpx;
+    z-index: 1;
+    filter: blur(10rpx);
+}
+.page__hd_movie {
+    position: absolute;
+    top: 26rpx;
+    left: 20rpx;
+    width: 224rpx;
+    height: 326rpx;
+    z-index: 3;
+}
+.page__hd_info {
+    position: absolute;
+    display: block;
+    left: 260rpx;
+    top: 40rpx;
+    height: 272rpx;
+}
+.info__movieName {
+    display: block;
+    font-size: 34rpx;
+    color: #FFFFFF;
+    z-index: 5;
+}
+.info__EnglishName {
+    display: block;
+    font-size: 20rpx;
+    margin-top: 16rpx;
+    color: #FFFFFF;
+    z-index: 5;
+}
+.info__time {
+    display: block;
+    font-size: 24rpx;
+    color: #252525;
+    margin-top: 32rpx;
+}
+.info__type {
+    display: block;
+    font-size: 24rpx;
+    color: #252525;
+    margin-top: 22rpx;
+}
+.info__showTime {
+    display: block;
+    font-size: 24rpx;
+    color: #252525;
+    margin-top: 22rpx;
+}
+.info__introduction {
+    display: block;
+    font-size: 24rpx;
+    color: #D9B177;
+    margin-top: 18rpx;
+}
+.page__hd_score {
+    position: absolute;
+    top: 90rpx;
+    right: 44rpx;
+    width: 76rpx;
+    height: 80rpx;
+    background-color: #D9B177;
+    color: #FFFFFF;
+    z-index: 7;
+}
+.score {
+    display: block;
+    margin: 16rpx 12rpx;
+}
+.page__bd {
+    position: relative;
+    top: 230rpx;
+    height: 1020rpx;
+    background-color: #F5F5F5;
+}
+.bd__movieSynopsis {
+    position: absolute;
+    background-color: #FFFFFF;
+    height: 154rpx;
+    top: 24rpx;
+    padding: 24rpx;
+    font-size: 26rpx;
+    color: #252525;
+    overflow: hidden;
+}
+
+
+.bd__movieParticipants {
+    position: absolute;
+    top: 250rpx;
+    width: 100%;
+    height: 318rpx;
+    background-color: #FFFFFF;
+}
+.scroll-view_participants {
+    width: 100%;
+    height: 320rpx;
+    white-space: nowrap;
+    display:flex;
+}
+.content {
+    /* width: 100%; */
+    position: relative;
+}
+.font {
+    font-size: 30rpx;
+    color: #212121;
+}
+.movieDirector {
+    position: absolute;
+    top: 24rpx;
+    left: 20rpx;
+}
+.movieActors {
+    position: absolute;
+    top: 24rpx;
+    left: 200rpx;
+    /* margin-bottom: 26rpx; */
+}
+.scroll-view__content {
+    display: inline-block;
+    width: 181rpx;
+}
+.directorImag {
+    display: inline-block;
+    width: 140rpx;
+    height: 140rpx;
+    margin-left: 20rpx;
+    position: relative;
+}
+.director {
+    display: block;
+    font-size: 22rpx;
+    margin-left: 30rpx;
+    margin-top: 10rpx;
+}
+.scroll-view__content {
+    margin-right: 20rpx;
+}
+.scroll-view__content-actors {
+    display: inline-block;
+    text-align: center;
+}
+.scroll-view__content-actors:before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 76rpx;
+    bottom: 48rpx;
+    left: 180rpx;
+    width: 1rpx;
+    border-right: 1rpx solid #D6D6D6;
+}
+.actorImage {
+    display: inline-block;
+    width: 140rpx;
+    height: 140rpx;
+    margin-right: 20rpx;
+    margin-top: 80rpx;
+}
+.actor {
+    display: block;
+    font-size: 22rpx;
+    margin-top: 10rpx;
+}
+.role {
+    display: block;
+    font-size: 22rpx;
+    margin-top: 12rpx;
+}
+
+.bd__movieStills {
+    position: absolute;
+    width: 100%;
+    height: 344rpx;
+    top: 560rpx;
+    margin-top: 28rpx;
+    background-color: #FFFFFF;
+}
+.image {
+    display: inline-block;
+    font-size: 32rpx;
+    margin-top: 26rpx;
+    margin-left: 26rpx;
+    margin-bottom: 26rpx;
+}
+.numbers {
+    display: inline-block;
+}
+.number {
+    display: inline-block;
+    font-size: 24rpx;
+    margin-left: 596rpx;
+    margin-top: 26rpx;
+}
+.stills {
+    height: 242rpx;
+    /* width: 100%; */
+}
+.still {
+    /* flex: 1; */
+    width: 242rpx;
+    height: 242rpx;
+    margin-right: 22rpx;
+}
+
+
+.page__ft {
+    bottom: 0;
+    width: 750rpx;
+    height: 98rpx;
+    position: fixed;
+    background-color: #DEAE72;
+}
+.ticket {
+    text-align: center;
+    font-size: 26rpx;
+    padding-top: 36rpx;
+    color: #FFFFFF;
+}

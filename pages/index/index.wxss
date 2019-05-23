@@ -1,0 +1,107 @@
+.page__hd {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 84rpx;
+  background-color: #EFEFF4;
+  color: #2A2A2A;
+}
+.page__hd_store {
+  display: inline-block;
+  font-size: 28rpx;
+}
+.btn {
+  display: inline-block;
+  margin-left: 0px;
+  width:100rpx;
+  height: 40rpx;
+  font-size: 20rpx;
+  background-color: #DEBD8F;
+  color: #FFFFFF;
+  border-radius:20rpx;
+  display: flex;
+  align-items: center;
+}
+.page__bd {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.item {
+  display: flex;
+  padding: 20rpx;
+  border-bottom: 1rpx solid #D3D3D3;
+}
+.movie__hd {
+  width: 120rpx;
+  height: 180rpx;
+}
+.movie__hd image {
+  width: 120rpx;
+  height: 180rpx;
+}
+.movie__bd {
+  margin-left: 22rpx;
+  flex: 1
+}
+.movie__bd_name {
+  font-family: "Microsoft YaHei";
+  margin-right: 12rpx;
+  margin-top: 14rpx;
+  display: inline-block;
+  font-size: 30rpx;
+  color:#242424;
+}
+.movie__bd_jd {
+  display: inline-block;
+  font-size: 18rpx;
+  color: #667C93;
+  padding: 4rpx;
+  border:2rpx solid #667C93;
+}
+.movie__bd_introduction,.movie__bd_actor {
+  display: block;
+}
+.movie__bd_introduction {
+  margin-top: 26rpx;
+  font-size: 26rpx;
+  color: #E6C79C;
+  width: 400rpx;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  overflow: hidden;
+}
+.movie__bd_actor {
+  margin-top: 22rpx;
+  font-size: 26rpx;
+  color: #6e6e6e;
+  width: 424rpx;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  overflow: hidden;
+}
+.movie__ft {
+  position: relative;
+}
+.movie__ft_score {
+  position: absolute;
+  font-size: 30rpx;
+  color: #DBB177;
+  display: block;
+  font-weight: bold;
+  top: -180rpx;
+  right: 12rpx;
+  width: 80rpx;
+}
+.big {
+  position: absolute;
+  bottom: 18rpx;
+  right: 12rpx;
+  width: 120rpx;
+  height: 56rpx;
+  font-size: 24rpx;
+  border-radius: 60rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

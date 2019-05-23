@@ -1,0 +1,207 @@
+/* pages/ticket/ticket.wxss */
+body {
+    height: 100%;
+}
+.page__hd {
+    width: 720rpx;
+    height: 190rpx;
+    margin-left: 30rpx;
+    position: relative;
+}
+.hd__store {
+    display: block;
+    font-size: 30rpx;
+    margin-top: 34rpx;
+}
+.hd__position {
+    display: block;
+    font-size: 24rpx;
+    margin-top: 22rpx;
+    color: #757575;
+}
+.hd__callIcon {
+    display: inline-block;
+    width: 28rpx;
+    height: 28rpx;
+    margin-right: 14rpx;
+}
+.hd__telephone {
+    display: inline-block;
+    font-size: 22rpx;
+    margin-top: 22rpx;
+    color: #868686;
+}
+.hd__mapIcon {
+    display: block;
+    width: 32rpx;
+    height: 40rpx;
+    position: absolute;
+    top: 66rpx;
+    right: 40rpx;
+}
+.hd__map {
+    display: block;
+    position: absolute;
+    font-size: 22rpx;
+    color: #757575;
+    top: 116rpx;
+    right: 34rpx;
+}
+
+
+.page__bd {
+    margin-top: -20rpx;
+    height:316rpx;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.bgImage {
+    width: 750rpx;
+    height: 300rpx;
+    position: absolute;
+    top: 0;
+    left: 0;
+    filter: blur(3px)
+}
+.bd__movies {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 300rpx;
+    white-space: nowrap;
+    width: 750rpx;
+    /* filter: blur(5px) */
+}
+.movies,.movie {
+    display: inline-block;
+    width: 140rpx;
+    height: 210rpx;
+    z-index: 55;
+}
+.movies {
+    margin-top: 35rpx;
+    margin-right: 30rpx;
+}
+.movie:first-child {
+    margin-left: 104rpx;
+}
+.movie:last-child {
+    margin-right: 104rpx;
+}
+.chooseMovie {
+    display: inline-block;
+    transform: scale(1.4);
+    border: 2rpx solid #FFFFFF;
+    margin-top: 18rpx;
+    position: absolute;
+}
+.bd__movieInfo {
+    width: 750rpx;
+    height: 102rpx;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.bd__movieName {
+    display: block;
+    font-size: 28rpx;
+    margin-top: 10rpx;
+    margin-bottom: 14rpx;
+}
+.bd__time {
+    display: block;
+    font-size: 24rpx;
+    color: #717171;
+}
+
+.page__ft {
+    height: 1000rpx;
+}
+.swiper-tab {
+    height: 80rpx;
+    display: flex;
+    font-size: 26rpx;
+    flex-direction: row;
+    background-color: #F6F6F6;
+}
+.swiper-tab-item {
+    flex: 1;
+    text-align: center;
+    margin-top: 26rpx;
+}
+.active {
+    border-bottom: 1px solid #414141;
+}
+
+
+.swiper-items {
+    width: 750rpx;
+    float: left;
+}
+.swiper-item {
+    width: 750rpx;
+    height: 176rpx;
+    position: relative;
+    border-bottom: 2rpx solid #D3D3D3;
+    float: left;
+}
+.item__hd,.item__bd,.item__ft {
+    display: inline-block;
+    position: absolute;
+}
+.hd__startTime,.hd__endTime,.bd__language,.bd__room,.ft__persentPrice,.ft__originalPrice {
+    display: block;
+}
+.item__hd {
+    top: 48rpx;
+    left: 32rpx;
+}
+.item__bd {
+    top: 58rpx;
+    left: 232rpx;
+}
+.item__ft {
+    top: 52rpx;
+    left: 460rpx;
+}
+.hd__startTime {
+    font-size: 36rpx;
+    color: #2D2D2D;
+}
+.hd__endTime {
+    font-size: 24rpx;
+    margin-top: 26rpx;
+    margin-left: 4rpx;
+    color: #636363; 
+}
+.bd__language {
+    font-size: 24rpx;
+    color: #1E1E1E;
+}
+.bd__room {
+    font-size: 24rpx;
+    margin-top: 30rpx;
+    color: #636363;
+}
+.ft__persentPrice {
+    font-size: 30rpx;
+    color: #D9AD70;
+}
+.ft__originalPrice {
+    font-size: 22rpx;
+    color: #676767;
+    margin-top: 26rpx;
+    margin-left: 14rpx;
+    text-decoration: line-through
+}
+.btn {
+    display: inline-block;
+    position: absolute;
+    left: 594rpx;
+    top: 62rpx;
+    background-color: #DBB177;
+    color: #FFFFFF;
+    font-size: 22rpx;
+    border-radius: 50rpx;
+}

@@ -1,0 +1,22 @@
+.container {
+    background-color: #000000;
+    height: 2000rpx;
+    padding-left: 16rpx;
+    padding-top: 20rpx;
+    padding-right: -30rpx;
+}
+.stills {
+    background-color: #000000;
+    display: inline-block;
+    width: 170rpx;
+    height: 170rpx;
+    margin-right: 12rpx;
+    margin-bottom: 14rpx;
+}
+.still {
+    display: inline-block;
+    width: 170rpx;
+    height: 170rpx;
+    margin-right: 12rpx;
+    margin-bottom: 14rpx;
+}

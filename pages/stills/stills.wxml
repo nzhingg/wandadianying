@@ -1,0 +1,6 @@
+<!--pages/stills/stills.wxml-->
+<view class="container">
+    <view class="stills" wx:for="{{item.stills}}" wx:key="index">
+       <image class="still" src="{{item.image}}" />
+    </view>
+</view>

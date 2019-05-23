@@ -1,0 +1,89 @@
+<!--pages/ticket/ticket.wxml-->
+<view class="container">
+    <view class="page__hd">
+        <text class="hd__store">{{store}}</text>
+        <text class="hd__position">{{position}}</text>
+        <image class="hd__callIcon" src="../../images/call.png" />
+        <text class="hd__telephone">0791-83811878</text>
+        <image class="hd__mapIcon" src="../../images/map.png" />
+        <text class="hd__map">地图</text>
+    </view>
+    <view class="page__bd">
+        <view class="bgImage" style="background: url('{{bgImage}}');background-size:750rpx 280rpx;background-repeat: no-repeat;"></view>
+        <scroll-view class="bd__movies" scroll-x="true" >
+            <view class="movies " bindtap="chooseMovie" wx:for="{{movies}}" wx:key="{{index}}" data-index="{{index}}">
+                <image class="movie {{chooseMovieIndex==index?'chooseMovie':''}}" src="{{item.image}}"/>
+            </view>
+        </scroll-view>
+    </view>
+    <view class="page__ft">
+            <view class="bd__movieInfo">
+                <text class="bd__movieName">{{movieName}}</text>
+                <text class="bd__time bd__type">{{movieTime}}-{{movieType}}</text>
+            </view>
+        <view class="swiper-tab">
+            <view class="swiper-tab-item {{activeIndex==0?'active':''}}" bindtap="changeTab" data-index="0">今天</view>
+            <view class="swiper-tab-item {{activeIndex==1?'active':''}}" bindtap="changeTab" data-index="1">明天</view>
+            <view class="swiper-tab-item {{activeIndex==2?'active':''}}" bindtap="changeTab" data-index="2">后天</view>
+        </view>
+        <swiper current='{{activeIndex}}' bindchange="swiperTab" style="height:100%;">
+            <swiper-item>
+                <view class="swiper-items">
+                    <view class="swiper-item" wx:for="{{today}}" wx:key="{{index}}">
+                        <view class="item__hd">
+                            <text class="hd__startTime">{{item.startTime}}</text>
+                            <text class="hd__endTime">{{item.endTime}}</text>
+                        </view>
+                        <view class="item__bd">
+                            <text class="bd__language">{{item.language}}</text>
+                            <text class="bd__room bd__roomType">{{item.room}} {{item.roomType}}</text>
+                        </view>
+                        <view class="item__ft">
+                            <text class="ft__persentPrice">{{item.presentPrice}}</text>
+                            <text class="ft__originalPrice">{{item.originalPrice}}</text>
+                        </view>
+                        <button class="btn">{{item.discountType}}</button>
+                    </view>
+                </view>
+            </swiper-item>
+            <swiper-item>
+                <view class="swiper-items">
+                    <view class="swiper-item" wx:for="{{tomorrow}}" wx:key="{{index}}">
+                        <view class="item__hd">
+                            <text class="hd__startTime">{{item.startTime}}</text>
+                            <text class="hd__endTime">{{item.endTime}}</text>
+                        </view>
+                        <view class="item__bd">
+                            <text class="bd__language">{{item.language}}</text>
+                            <text class="bd__room bd__roomType">{{item.room}} {{item.roomType}}</text>
+                        </view>
+                        <view class="item__ft">
+                            <text class="ft__persentPrice">{{item.presentPrice}}</text>
+                            <text class="ft__originalPrice">{{item.originalPrice}}</text>
+                        </view>
+                        <button class="btn">{{item.discountType}}</button>   
+                    </view>
+                </view>
+            </swiper-item>
+            <swiper-item>
+                <view class="swiper-items">
+                    <view class="swiper-item" wx:for="{{afterTomorrow}}" wx:key="{{index}}">
+                        <view class="item__hd">
+                            <text class="hd__startTime">{{item.startTime}}</text>
+                            <text class="hd__endTime">{{item.endTime}}</text>
+                        </view>
+                        <view class="item__bd">
+                            <text class="bd__language">{{item.language}}</text>
+                            <text class="bd__room bd__roomType">{{item.room}} {{item.roomType}}</text>
+                        </view>
+                        <view class="item__ft">
+                            <text class="ft__persentPrice">{{item.presentPrice}}</text>
+                            <text class="ft__originalPrice">{{item.originalPrice}}</text>
+                        </view>
+                        <button class="btn">{{item.discountType}}</button>   
+                    </view>   
+                </view>
+            </swiper-item>
+        </swiper>
+    </view>
+</view>
